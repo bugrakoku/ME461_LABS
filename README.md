@@ -40,13 +40,17 @@ For maximum convenience:
 
 3. Open VSCode's command pallete (CTRL + SHIFT + P) and run ```Dev Containers: Rebuild and Reopen in Container```
 
-4. Allow docker to launch GUIs by running ```xhost +local:docker```. This can optionally be _added to the .bashrc_ for extra convience. Ignore any warnings resulting from this command.
+4. Allow docker to launch GUIs by running
+   ```
+   xhost +local:docker
+   ```
+   This can optionally be _added to the .bashrc_ for extra convience. Ignore any warnings resulting from this command.
 
-5. Wait for the building process to finish. The building process might take upwards of 10-15 mins depending on your internet connection.
+6. Wait for the building process to finish. The building process might take upwards of 10-15 mins depending on your internet connection.
 
-6. Check your installation by running any ros2 or gazebo command. A good candidate is ```ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py``` since it requires all major components to be functioning properly (ROS2, Gazebo, and X11 server)
+7. Check your installation by running any ros2 or gazebo command. A good candidate is ```ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py``` since it requires all major components to be functioning properly (ROS2, Gazebo, and X11 server)
 
-7. After building once, run ```Dev Containers: Reopen in Container``` in the command pallete to resume working on the labs.
+8. After building once, run ```Dev Containers: Reopen in Container``` in the command pallete to resume working on the labs.
 
 
 ## Building Using DOCKER CLI
