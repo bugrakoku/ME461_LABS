@@ -25,7 +25,7 @@ RUN apt update; apt install build-essential \
     neovim \
     galculator \
     -y iputils-ping \
-    -y zsh
+    -y zsh \
     python3-pip 
 
 # Install ROS packages
