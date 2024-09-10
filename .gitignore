@@ -13,3 +13,6 @@
 
 ### VisualStudioCode ###
 **/.vscode/
+
+# just ignore this directory
+./labs_ws/just_testing/
