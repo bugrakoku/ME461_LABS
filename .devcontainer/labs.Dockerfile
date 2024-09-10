@@ -22,6 +22,8 @@ RUN apt update; apt install build-essential \
     curl \
     -y libx11-dev \
     cmake \
+    neovim \
+    galculator \
     python3-pip 
 
 # Install ROS packages
