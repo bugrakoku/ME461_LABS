@@ -9,4 +9,5 @@ echo "source /home/me461/mnt/labs_ws/install/setup.bash" >>~/.bashrc
 echo "export GAZEBO_MODEL_PATH=\${GAZEBO_MODEL_PATH}:/opt/ros/humble/share/humble_gazebo/models" >>~/.bashrc
 echo "export TURTLEBOT3_MODEL=waffle" >>~/.bashrc
 echo "source /home/me461/mnt/labs_ws/.bug_init" >>~/.bashrc
+echo "source /home/me461/mnt/labs_ws/.bug_init" >>~/.zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
