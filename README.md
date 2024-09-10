@@ -67,7 +67,10 @@ ME461 students are recommended to use the convenience method outlined above. Cur
 docker build -t me461_labs -f ./labs.Dockerfile .
 ``` 
 
-- To run the docker container (instantiate and image) run the ```<path>/util/build_container_instance.sh``` script.
+- To run the docker container (instantiate and image) run the ```build_container_instance.sh```.  Let's assume that you are within me461 directory, then simply run 
+```
+./util/build_container_instance.sh
+```  
 
 - To run commands through the docker container interactively use 
 ```
@@ -78,7 +81,12 @@ docker container exec -it me461_labs bash
 
 ## Launching the Game
 
-- To spawn a turtlebot and a camera in Gazebo run ```ros2 launch sokoban gazebo_launch.py world:="<world_name>.world"```. The camera stream is published on the topic `world_cam/image_raw`
+- To spawn a turtlebot and a camera in Gazebo run 
+```
+ros2 launch sokoban gazebo_launch.py world:="<world_name>.world"
+``` 
+
+The camera stream is published on the topic `world_cam/image_raw`
 
 - Note that the world argument defaults to empty.world. The following worlds are available as of currently:
     1. empty.world
@@ -94,6 +102,9 @@ docker container exec -it me461_labs bash
         - spawn_target: whether to spawn targets or not. Setting this to *False* ignores all other targert params
         - target_type: chooses target to spawn. Possible Targets: 'donut', 'square', 'triangle', 'eight'
         - num_target:  num of targets to spawn if spawn_target is *True*
-    2. ```ros2 launch spawn_objects spawn_objects.launch.py```
+    2. 
+```
+ros2 launch spawn_objects spawn_objects.launch.py
+```
 
 
