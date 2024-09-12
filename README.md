@@ -14,6 +14,22 @@ For the best team work experience, create a Github Organization account and crea
 
 3. [Configure Docker to start on boot](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot-with-systemd)
 
+4. Clone the repo (or forked repo) to any desired location. A suitable place might be a directory named me461 on your desktop 
+```  
+git clone https://github.com/RobotDegilim/ME461_LABS.git ~/Desktop/me461
+```  
+
+    
+    The directory structure should look similar to the following:
+
+    ```
+    Desktop - or the folder you clonded the repo
+    └── me461
+        ├── .devcontainer
+        ├── labs_ws
+        └── util
+    ```
+
 ## Enabling Nvidia Acceleration
 
 (For PCs with NVIDIA GPUs) make sure you are using official NVIDIA drivers and install [NVIDIA Container Toolkit.](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) Test your installation with:  
@@ -27,23 +43,9 @@ NOTE: If your computer doesn't have an NVIDIA GPU remove the ```--gpus all``` ru
 
 For maximum convenience:
  
-1. Install the _Remote Development_ extension in VSCode.
-
-2. Clone the repo (or forked repo) to any desired location. A suitable place might be a directory named me461 on your desktop 
-```  
-git clone https://github.com/RobotDegilim/ME461_LABS.git ~/Desktop/me461
-```  
-
-    
-    The directory structure should look similar to the following:
-
-    ```
-    Desktop
-    └── me461
-        ├── .devcontainer
-        ├── labs_ws
-        └── util
-    ```
+1. Use [VSCode](https://code.visualstudio.com/docs/setup/linux)
+  
+2. Install the _Remote Development_ extension in VSCode.
 
 3. Open VSCode's command pallete (CTRL + SHIFT + P) and run 
 ```
@@ -63,23 +65,33 @@ since it requires all major components to be functioning properly (ROS2, Gazebo,
 
 ## Building Using DOCKER CLI
 
-ME461 students are recommended to use the convenience method outlined above. Curious students are encouraged to read the docker file, understand it, and then do everything through the terminal.
+ME461 students generally prefer to use the convenience method (a.k.a. _lazy_ VSCoder) as outlined above.  
+Curious students however, are encouraged to read the docker file, understand it, and then do everything through the terminal.
 
 - To build the docker container (create an image) navigate to .devcontainer directory and run 
 ```
 docker build -t me461_labs -f ./labs.Dockerfile .
-``` 
+```  
+Read this file carefully, if you need other programs, you can add them before you built the docker file. Once it is compiled, you will have to live with it.  
+Note that this is a good thing, since, if  you mess up anything, you will be able to create a fresh instance of you docker iamge.
 
 - To run the docker container (instantiate and image) run the ```build_container_instance.sh```.  Let's assume that you are within me461 directory, then simply run 
 ```
 ./util/build_container_instance.sh
-```  
+```
+You are also recommended to read this file, and the files referenced from this file, and so on...  
 
-- To run commands through the docker container interactively use 
+Note that RUNNING a docker image, creates and instance as defined by RUN parameters. Once you RUN an image, it will be alive, and you will be able to connect and disconnect to that instant as many times as you need. You only need to STOP the instance, remove it and RUN a new one, in case you mess things up, or change the build file to meet your taste. If you develop deeper tastes, which you are encouared to, you will start editing with build file first, then the RUN files. Enjoy the ride...  
+Well, once you instantiate a docker image by running it, you can check and see that it is up by:
+```
+docker ps -a
+```
+
+Even though it is up, you are not connected to it. To get a intearactive terminal connection type:
 ```
 docker container exec -it me461_labs bin/bash
 ```
-or if you are like me, and prefer ```zsh``` over ```bash```, try:
+or if you are like me, and prefer the richer ```zsh``` environemnt with ```oh-my-zsh``` over ```bash```, try:
 ```
 docker container exec -it me461_labs bin/zsh
 ```
@@ -88,10 +100,14 @@ To check your installation is ok, similar to what is given above you can type:
 ```
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
-yet, if nothing went wront, an alias named ```testros``` should have been created to run the above test case. Give it a try.  
+yet, if nothing went wrong, an alias named ```testros``` should have been created, and typing it on the command line should run the test case given above.  
 
 
-> **NOTE**: Don't forget to run ```xhost +local:docker``` in the base machine's terminal inorder to allow Docker to run GUIs.
+> **NOTE**: Don't forget to run
+```
+xhost +local:docker
+```
+in the host/base machine's terminal in order to allow Docker to run GUIs.
 
 ## Launching the Game
 
