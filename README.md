@@ -14,12 +14,20 @@ For the best team work experience, create a Github Organization account and crea
 
 3. [Configure Docker to start on boot](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot-with-systemd)
 
-4. Clone the repo (or forked repo) to any desired location. A suitable place might be a directory named me461 on your desktop 
+4. Clone or fork the repo to any desired location on your linux computer. For simplicity, a directory named ```me461``` on your desktop is not a bad idea:
+
+Note that this repo itself if forked from an earlier ```ME462 class project repo```. 
+If you want to try the vanilla version punch in:
 ```  
 git clone https://github.com/RobotDegilim/ME461_LABS.git ~/Desktop/me461
 ```  
-    
-The directory structure should look similar to the following:
+
+or you can try my spiced up version:
+```  
+git clone https://github.com/bugrakoku/ME461_LABS.git ~/Desktop/me461
+```  
+
+After cloning the directory structure should look similar to the following:
 
 ```
 Desktop - or the folder you clonded the repo
@@ -28,6 +36,14 @@ Desktop - or the folder you clonded the repo
     ├── labs_ws
     └── util
 ```
+
+You can check this using the ```tree``` command in linux.  If it is not installed on your system, by now you should know what to do.  
+
+Note that this repo (as mentioned to be the spiced up version of the original) is what I am using in class. It also support ```zsh``` as well as ```bash``` which comes with autocomplete suggestions and many more nice utilities.
+
+Also note that this beefed up version has ```neovim``` installed and configured for avarage text editing. Who does not love ```VIM```?  
+
+
 
 ## Enabling Nvidia Acceleration
 
