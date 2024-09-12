@@ -1,8 +1,12 @@
+# the following are a subset of conveninene utilities I regularly use
+# the are not bash or zsh special
 
-
+# some variables I used, now that this is a portion of my larger dot config file, 
+# use of variables might not necessarily seem necessary, but even in here it is not bad practice
 shell_config=$HOME'/.zshrc'
 init_config=$HOME'/mnt/util/.bug_init.zsh'
 
+# some python based aliases
 alias py='python3'
 alias py3='python3'
 alias py2='\python'
@@ -10,8 +14,7 @@ alias virtualenv='python3 -m venv'
 alias serialports='python3 -m serial.tools.list_ports'
 alias miniterm='python3 -m serial.tools.miniterm'
 
-#aliases
-#commands
+#aliases that are for general use
 alias edit=nvim
 alias sudo='sudo '
 alias clc='clear;echo @$HOST;pwd'
@@ -31,13 +34,12 @@ alias publicIP='curl ifconfig.co'
 alias dog='highlight -O ansi --force'
 alias scan_network='sudo nmap -sn 192.168.1.0/24'
 
-source ~/mnt/util/.oh/zsh-vim-mode.plugin.zsh
-
+# zsh-autosuggestion settings
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#009999"
 bindkey "  " autosuggest-accept
 
-source /opt/ros/humble/setup.zsh
-[ -e /opt/ros/humble/setup.zsh ] && source /opt/ros/humble/setup.zsh && printClr 'ros humble HAZIR' 99
+# yell out that humble is there
+[ -e /opt/ros/humble/setup.zsh ] && printClr 'ros humble ready 2 rumble' 99
 
 getWeather ankara
 

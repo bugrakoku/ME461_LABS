@@ -21,14 +21,16 @@ docker run -d \
 	-e DISPLAY=${DISPLAY} \
 	-u 1000 \
 	-w /home/me461/mnt/labs_ws \
-	--name me461_labs --restart unless-stopped \
+	--name me461_labs \
+	--restart unless-stopped \
 	me461_labs:latest \
 	sleep infinity
 
 echo "running convenience utils..."
 #extra convenient stuff
-docker exec me461_labs /bin/bash ../util/init_env.sh
+docker exec me461_labs /bin/zsh ../util/init_env.sh
 
 echo "enjoy the new instance by typing:"
 echo "docker exec -it me461_labs /bin/zsh"
-
+echo "or"
+echo "docker exec -it me461_labs /bin/bash"
