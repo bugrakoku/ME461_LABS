@@ -74,8 +74,19 @@ docker build -t me461_labs -f ./labs.Dockerfile .
 
 - To run commands through the docker container interactively use 
 ```
-docker container exec -it me461_labs bash
+docker container exec -it me461_labs bin/bash
 ```
+or if you are like me, and prefer ```zsh``` over ```bash```, try:
+```
+docker container exec -it me461_labs bin/zsh
+```
+
+To check your installation is ok, similar to what is given above you can type: 
+```
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+```
+yet, if nothing went wront, an alias named ```testros``` should have been created to run the above test case. Give it a try.  
+
 
 > **NOTE**: Don't forget to run ```xhost +local:docker``` in the base machine's terminal inorder to allow Docker to run GUIs.
 
