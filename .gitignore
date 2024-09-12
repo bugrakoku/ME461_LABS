@@ -16,3 +16,7 @@
 
 # just ignore this directory
 **/just_testing/
+
+# a cnovention for dummy files
+# any fille with .ff extension fails in git updates :)
+*.ff

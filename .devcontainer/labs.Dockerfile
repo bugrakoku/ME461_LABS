@@ -20,6 +20,7 @@ RUN apt update; apt install build-essential \
     autoconf \
     -y git \
     curl \
+    wget \
     -y libx11-dev \
     cmake \
     neovim \
