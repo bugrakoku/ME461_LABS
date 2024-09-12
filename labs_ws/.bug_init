@@ -1,3 +1,0 @@
-alias lsa='ls -al'
-alias pong='ping -c 4 google.com'
-alias cls='clear;pwd'

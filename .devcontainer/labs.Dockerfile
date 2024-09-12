@@ -24,6 +24,8 @@ RUN apt update; apt install build-essential \
     -y libx11-dev \
     cmake \
     neovim \
+    highlight \
+    htop \
     galculator \
     -y iputils-ping \
     -y zsh \
