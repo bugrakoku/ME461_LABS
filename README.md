@@ -16,7 +16,8 @@ For the best team work experience, create a Github Organization account and crea
 
 ## Enabling Nvidia Acceleration
 
-(For PCs with NVIDIA GPUs) make sure you are using official NVIDIA drivers and install [NVIDIA Container Toolkit.](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) Test your installation with `sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi`
+(For PCs with NVIDIA GPUs) make sure you are using official NVIDIA drivers and install [NVIDIA Container Toolkit.](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) Test your installation with:  
+'''sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi'''
 
 NOTE: If your computer doesn't have an NVIDIA GPU remove the ```--gpus all``` run arg from *.devcontainer/devcontainer.json*
 
