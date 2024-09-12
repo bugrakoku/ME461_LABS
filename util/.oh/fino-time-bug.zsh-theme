@@ -20,7 +20,7 @@ function prompt_char {
     #git branch >/dev/null 2>/dev/null && echo '⠠⠵' && return
     git branch >/dev/null 2>/dev/null && printClr '[ ☪ ]' 45 && return
     #echo '○'
-	printClr '[ ☪ ]' 9
+	printClr '[ ☪ ]' 1
 }
 
 function box_name {
