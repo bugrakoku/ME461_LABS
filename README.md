@@ -21,7 +21,8 @@ git clone https://github.com/RobotDegilim/ME461_LABS.git ~/Desktop/me461
     
 The directory structure should look similar to the following:
 
-```Desktop - or the folder you clonded the repo
+```
+Desktop - or the folder you clonded the repo
 └── me461
     ├── .devcontainer
     ├── labs_ws
