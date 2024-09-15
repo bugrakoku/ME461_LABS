@@ -34,9 +34,6 @@ alias publicIP='curl ifconfig.co'
 alias dog='highlight -O ansi --force'
 alias scan_network='sudo nmap -sn 192.168.1.0/24'
 
-# zsh-autosuggestion settings
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#009999"
-bindkey "  " autosuggest-accept
 
 # yell out that humble is there
 [ -e /opt/ros/humble/setup.zsh ] && printClr 'ros humble ready 2 rumble' 99

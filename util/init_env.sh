@@ -7,6 +7,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sed -i 's/robbyrussell/fino-time-bug/g' ~/.zshrc
 sed -i 's/(git)/(git zsh-autosuggestions themes)/g' ~/.zshrc
 
+# zsh-autosuggestion settings
+echo 'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#009999"' >> ~/.zshrc
+
+
 echo "RC file updates started"
 
 #let ros rule
@@ -54,3 +58,4 @@ ln -vnsf /home/me461/mnt/util/.nvim /home/me461/.config/nvim >/dev/null 2>&1
 # remember that you have to adjsut this if you are not in Istanbul time zone for time critical apps
 sudo ln -vnsf /usr/share/zoneinfo/Turkey /etc/localtime >/dev/null 2>&1
 
+echo 'bindkey "  " autosuggest-accept' >> ~/.zshrc

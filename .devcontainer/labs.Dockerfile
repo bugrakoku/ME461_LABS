@@ -26,6 +26,7 @@ RUN apt update; apt install build-essential \
     neovim \
     highlight \
     htop \
+    tree \
     galculator \
     -y iputils-ping \
     -y zsh \
