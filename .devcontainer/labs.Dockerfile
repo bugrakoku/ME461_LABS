@@ -24,6 +24,7 @@ RUN apt update; apt install build-essential \
     -y libx11-dev \
     cmake \
     neovim \
+    net-tools \
     highlight \
     htop \
     tree \

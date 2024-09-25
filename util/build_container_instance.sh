@@ -12,9 +12,11 @@ docker rm me461_labs >/dev/null 2>&1 || true
 echo "done with clearing"
 echo "running the image"
 
+# do we need --ipc=host in the run command below?
 docker run -d \
 	--privileged \
 	--net=host \
+	--pid=host \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
 	-v ${ME461_DIR}:/home/me461/mnt/ \
 	-v /dev:/dev \
