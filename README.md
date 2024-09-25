@@ -52,6 +52,24 @@ Also note that this beefed up version has ```neovim``` installed and configured 
 sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
 ```
 
+## UID for your user  
+Check out your user ID number associated with your user name:
+```
+echo $UID
+```
+If it is _1000_ move on. If it is not, which is probably there are more than one user on your linux machine, then:  
+Open file ```.devcontainer/labs.Dockerfile``` and edit update _1000_ with your UID in the line that should be as follows:  
+```
+ARG USER_UID = 1000
+```
+Open file ```util/build_container_instance.sh``` and similarly update the number _1000_ on the line that reads:
+```
+    -u 1000
+```
+
+If you compile without updating your UID, you will have a crappy image.  
+
+
 NOTE: If your computer doesn't have an NVIDIA GPU remove the ```--gpus all``` run arg from *.devcontainer/devcontainer.json*
 
 ## Conventient First-Time Installation 
