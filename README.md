@@ -60,7 +60,7 @@ Check out your user ID number associated with your user name:
 ```
 echo $UID
 ```
-If it is _1000_ move on. If it is not, most probably there are more than one user on your linux machine, anyway:  
+If it is _1000_ move on. If it is not, most probably there are more than one user on your linux machine, or you may be using MacOS, anyway:  
 Open file ```.devcontainer/labs.Dockerfile``` and edit update _1000_ with your UID in the line that should be as follows:  
 ```
 ARG USER_UID = 1000
